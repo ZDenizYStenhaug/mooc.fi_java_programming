@@ -20,7 +20,6 @@ public class Counter {
     }
     
     public int value() {
-  
         return num;
     }
     
