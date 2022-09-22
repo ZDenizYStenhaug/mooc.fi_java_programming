@@ -20,5 +20,23 @@ public class Item {
     public int getWeight() {
         return weight;
     }
+    
+    public boolean equals(Object o) {
+        if(o == this) {
+            return true;
+        }
+        if(!(o instanceof Item)) {
+            return false;
+        }
+        Item i = (Item) o;
+        if(i.name.equals(this.name)) {
+            return true;
+        }
+        return false;
+    }
+    
+    public int hashCode() {
+        return name.hashCode();
+    }
 
 }
