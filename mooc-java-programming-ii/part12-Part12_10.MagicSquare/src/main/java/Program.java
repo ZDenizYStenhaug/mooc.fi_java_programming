@@ -6,5 +6,6 @@ public class Program {
         
         MagicSquareFactory msFactory = new MagicSquareFactory();
         System.out.println(msFactory.createMagicSquare(5));
+        
     }
 }
