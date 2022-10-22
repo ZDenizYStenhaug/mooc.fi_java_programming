@@ -27,7 +27,17 @@
             <version>0.4.2</version>
             <scope>test</scope>
         </dependency>
-        
+        <dependency>
+                    <groupId>org.openjfx</groupId>
+                    <artifactId>javafx-controls</artifactId>
+                    <version>11.0.2</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.testfx</groupId>
+                    <artifactId>openjfx-monocle</artifactId>
+                    <version>8u76-b04</version>
+                    <scope>test</scope>
+                </dependency>
         <dependency>
             <groupId>org.testfx</groupId>
             <artifactId>testfx-junit</artifactId>
@@ -50,6 +60,16 @@
    
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.3</version>
+                <configuration>
+                <release>${maven.compiler.release}</release>
+                <mainClass>application.ButtonAndLabelApplication</mainClass>
+                <launcher>launcher</launcher>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -90,6 +110,16 @@
 
             <dependencies>
                 <dependency>
+                    <groupId>org.openjfx</groupId>
+                    <artifactId>javafx-base</artifactId>
+                    <version>11.0.2</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.openjfx</groupId>
+                    <artifactId>javafx-controls</artifactId>
+                    <version>11.0.2</version>
+                </dependency>
+                <dependency>
                     <groupId>org.testfx</groupId>
                     <artifactId>openjfx-monocle</artifactId>
                     <version>8u76-b04</version>
@@ -129,9 +159,11 @@
                     <plugin>
                         <groupId>org.openjfx</groupId>
                         <artifactId>javafx-maven-plugin</artifactId>
-                        <version>0.0.2</version>
+                        <version>0.0.3</version>
                         <configuration>
-                            <mainClass>buttonandlabel.ButtonAndLabelApplication</mainClass>
+                            <release>${maven.compiler.release}</release>
+                            <mainClass>application.ButtonAndLabelApplication</mainClass>
+                            <launcher>launcher</launcher>
                         </configuration>
                     </plugin>
                 </plugins>
