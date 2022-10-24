@@ -102,11 +102,12 @@ public class TextStatisticsApplicationTest extends ApplicationTest {
 
         int length = input.length();
         int words = input.split(" ").length;
+
         String longest = Arrays.stream(input.split(" "))
                 .sorted((s1, s2) -> s2.length() - s1.length())
                 .findFirst()
                 .get();
-
+        
         assertEquals("The first text element should have the text \"Letters: " + length + "\". Now the text was: \"" + ((Label) textElements.get(0)).getText() + "\"", "Letters: " + length, ((Label) textElements.get(0)).getText());
         assertEquals("The second text element should have the text \"Words: " + words + "\". Now the text was: \"" + ((Label) textElements.get(1)).getText() + "\"", "Words: " + words, ((Label) textElements.get(1)).getText());
         assertEquals("The third text element should have the text \"The longest word is: " + longest + "\". Now the text was: \"" + ((Label) textElements.get(2)).getText() + "\"", "The longest word is: " + longest, ((Label) textElements.get(2)).getText().trim());

@@ -16,6 +16,16 @@
     
     <dependencies>
         <dependency>
+                    <groupId>org.openjfx</groupId>
+                    <artifactId>javafx-base</artifactId>
+                    <version>11.0.2</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.openjfx</groupId>
+                    <artifactId>javafx-controls</artifactId>
+                    <version>11.0.2</version>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
@@ -51,6 +61,16 @@
     <build>
         <plugins>
             <plugin>
+                        <groupId>org.openjfx</groupId>
+                        <artifactId>javafx-maven-plugin</artifactId>
+                        <version>0.0.3</version>
+                        <configuration>
+                            <release>${maven.compiler.release}</release>
+                            <mainClass>title.Main</mainClass>
+                            <launcher>launcher</launcher>
+                        </configuration>
+                    </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
@@ -58,7 +78,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version>
+                <version>1.8.0</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -89,6 +109,16 @@
             </properties>
 
             <dependencies>
+                <dependency>
+                    <groupId>org.openjfx</groupId>
+                    <artifactId>javafx-base</artifactId>
+                    <version>11.0.2</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.openjfx</groupId>
+                    <artifactId>javafx-controls</artifactId>
+                    <version>11.0.2</version>
+        </dependency>
                 <dependency>
                     <groupId>org.testfx</groupId>
                     <artifactId>openjfx-monocle</artifactId>
@@ -126,6 +156,16 @@
             </dependencies>
             <build>
                 <plugins>
+                    <plugin>
+                        <groupId>org.openjfx</groupId>
+                        <artifactId>javafx-maven-plugin</artifactId>
+                        <version>0.0.3</version>
+                        <configuration>
+                            <release>${maven.compiler.release}</release>
+                            <mainClass>title.Main</mainClass>
+                            <launcher>launcher</launcher>
+                        </configuration>
+                    </plugin>
                     <plugin>
                         <groupId>org.openjfx</groupId>
                         <artifactId>javafx-maven-plugin</artifactId>
